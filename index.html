@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="reveal">
+            <img src="http://dummyimage.com/300x200/000/fff.gif&text=Black" alt="dummy image" width="300" height="200" />
+            <img class="image2" src="http://dummyimage.com/300x200/fff/000.gif&text=White" alt="dummy image" width="300" height="200" />
+            <div class="activator"></div>
+        </div>
+    </div>
+    <script>
+        function reveal(event) {
+            event.target.previousElementSibling.style.clip = "rect(0px, " + (event.clientX - event.target.offsetLeft) + "px, 280px, 0px)";
+        }
+        $('.activator').mousemove(reveal);
+    </script>    
+</body>
+
+</html>
