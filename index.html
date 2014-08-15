@@ -6,7 +6,8 @@
     <title>Image Reveal</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <link href="styles.css" rel="stylesheet" />
-    <script src="jquery.js"></script>
+    <script src="js/jquery.js"></script> 
+    <script src="js/scripts.js"></script>     
 </head>
 
 <body>
@@ -16,13 +17,7 @@
             <img class="image2" src="http://dummyimage.com/600x400/fff/000.gif&text=White" alt="dummy image" width="600" height="400" />
             <div class="activator"></div>
         </div>
-    </div>
-    <script>
-        function reveal(event) {
-            event.target.previousElementSibling.style.clip = "rect(0px, " + (event.clientX - event.target.offsetLeft) + "px, 400px, 0px)";
-        }
-        $('.activator').mousemove(reveal);
-    </script>
+    </div> 
 </body>
 
 </html>
